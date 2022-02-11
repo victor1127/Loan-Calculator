@@ -1,19 +1,21 @@
 :root
 {
-    --primary-color:whitesmoke;
-    --secondary-color:#BF988A;
+    --primary-color:white;
+    --secondary-color:rgb(84, 186, 185)
+    ;
     --third-color:#A66F5B;
     --dark-gray-color:#323232;
 }
 
 body
 {
-    background:var(--primary-color);
+    background: white
 }
 
 nav
 {
-    background: var(--dark-gray-color);
+    background: linear-gradient(to right, rgba(84, 84, 185, 0.5), rgb(84, 186, 185,0.6)
+    );
 }
 
 .navimg
@@ -54,7 +56,7 @@ footer
 }
 .icon a
 {
-    color:var(--third-color);
+    color:var(--secondary-color);
 }
 .icon a:hover
 {
@@ -72,7 +74,7 @@ footer
 }
 .checklist span
 {
-    color:var(--secondary-color)
+    color:var(--dark-gray-color)
 }
 
 code[class*="language-"], pre[class*="language-"]
@@ -84,7 +86,7 @@ code[class*="language-"], pre[class*="language-"]
 
 .tecnology
 {
-    color:var(--third-color);
+    color:var(--dark-gray-color);
     font-size: 3em;
 
 }

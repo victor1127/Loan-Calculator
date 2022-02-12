@@ -90,3 +90,36 @@ code[class*="language-"], pre[class*="language-"]
     font-size: 3em;
 
 }
+.btn-button
+{
+    background: none;
+    color: var(--secondary-color);
+    border: var(--secondary-color) solid 1px;
+    border-radius: 3px;
+}
+
+.btn-button:hover
+{
+    background: var(--dark-gray-color);
+    color:var(--secondary-color);
+    border:none;
+}
+
+.bg-main
+{
+    background: #EFEFEF;
+}
+.result-text
+{
+    text-align: center;
+}
+
+.resultHead
+{
+    color:black;
+}
+
+.bgTableHead
+{
+    background: #a8aadb;
+}

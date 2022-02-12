@@ -55,14 +55,75 @@
     <!--Main-->
     <main class="flex-shrink-0">
         <div class="container">
-            <div class="row">
-                <div class="col border pt-5">
-                <label>Loan amount</label>             
-                <input class="form-control w-50 d-inline ms-2" type="number" min="0" placeholder="0" aria>
+            <div class="row row-cols-1 row-cols-md-2 mt-4">
+                <h2>Loan Calculator</h2>
+            </div>
 
+            <div class="row g-0 pt-2 row-cols-1 row-cols-md-2">
+                <div class="col bg-main">
+                    <div class="p-2">
+                        <form>
+                            <label class="text-muted">Loan Amount</label>
+                            <input class="form-control mb-1" type="number" min="0" placeholder="0" id="loanAmount" required>
+                            <label class="text-muted">Term (Months)</label>
+                            <input class="form-control mb-1" type="number" min="0" placeholder="0" id="term" required>
+                            <label class="text-muted">Interest Rate</label>
+                            <input class="form-control" type="number" min="0" placeholder="0" id="rate" required>
+
+                            <div class="d-flex justify-content-end pt-2">
+                                <button class="btn-button" type="submit" id="btnCalculate">Calculate</button>
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
                 <div class="col border">
-                    sdsdd
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="result-text pt-4">
+                                <label>Your Monthly Payment</label>
+                                <h1 class="resultHead mt-3" id="resultMonthlyP">$</h1>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="-invisible mt-4 ps-3" id="resultDetails">
+                                <div class="d-flex justify-content-between">
+                                    <label>Total Principal</label>
+                                    <label class="adjdetails"id="totalPrincipal">$$</label>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label>Total Interest</label>
+                                    <label class="adjdetails" id="totalInterest">$$</label>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label>Total Cost</label>
+                                    <label class="adjdetails" id="totalCost">$$</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="bgTableHead">
+                                <tr>
+                                    <td>Month</td>
+                                    <td>Payment</td>
+                                    <td>Principal</td>
+                                    <td>Interest</td>
+                                    <td>Total interest</td>
+                                    <td>Balance</td>
+                                </tr>
+                            </thead>
+                            <tbody id="tableresult">
+                                <!--<tr><td>1</td></tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -112,6 +173,11 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <script src="/js/side.js"></script>
+    <script>
+        document.getElementById("btnCalculate").addEventListener("click", GetValues);
     </script>
 
 </body>

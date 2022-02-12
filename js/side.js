@@ -1,22 +1,28 @@
-class LoanModel
+function GetValues()
 {
-    constructor(loanAmount,term,interestRate)
-    {
-        this.LoanAmount=loanAmount;
-        this.Term=term;
-        this.InterestRate=interestRate;
-    }
-
+    let loan = GetInitialValues(new LoanModel());
+    GetMonthlyPayment(loan);
 }
 
-
-function GetInitialValues()
+function LoanModel()
 {
-    let Loan = new LoanModel();
-    Loan.loanAmount =  document.getElementById("loanAmount").value;
-    Loan.Term =  document.getElementById("term").value;
-    Loan.InterestRate =  document.getElementById("term").value;
+    this.LoanAmount;
+    this.Term;
+    this.InterestRate;
+}
+
+function GetInitialValues(LoanModel)
+{
+    LoanModel.LoanAmount = document.getElementById("loanAmount").value,
+    LoanModel.Term = document.getElementById("term").value,
+    LoanModel.InterestRate = document.getElementById("rate").value
+    return LoanModel;
     
 }
 
+function GetMonthlyPayment(loan)
+{
+    //Calcular cuota préstamo = (Monto * (TEM x (1 + TEM) ^ n)) / ((1 + TEM) ^ n) - 1)
+    let monthlyPayment = 
 
+}

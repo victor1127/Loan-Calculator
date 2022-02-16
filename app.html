@@ -70,7 +70,7 @@
                             <input class="form-control" type="number" min="0" placeholder="0" id="rate" required>
 
                             <div class="d-flex justify-content-end pt-2">
-                                <button class="btn-button" type="submit" id="btnCalculate">Calculate</button>
+                                <button class="btn-button" type="button" id="btnCalculate"> Calculate </button>
                             </div>
                         </form>
                     </div>
@@ -84,24 +84,25 @@
                             </div>
                         </div>
                         <div class="col-9">
-                            <div class="-invisible mt-4 ps-3" id="resultDetails">
+                            <div class="mt-4 mb-3 ps-3" id="resultDetails">
                                 <div class="d-flex justify-content-between">
                                     <label>Total Principal</label>
-                                    <label class="adjdetails"id="totalPrincipal">$$</label>
+                                    <label class="adjdetails"id="totalPrincipal"></label>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <label>Total Interest</label>
-                                    <label class="adjdetails" id="totalInterest">$$</label>
+                                    <label class="adjdetails" id="totalInterest"></label>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <label>Total Cost</label>
-                                    <label class="adjdetails" id="totalCost">$$</label>
+                                    <label class="adjdetails" id="totalCost"></label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--table-->
             <div class="row mt-3">
                 <div class="col-12">
                     <div class="table-responsive">
@@ -167,6 +168,17 @@
             </div>
         </div>
     </footer>
+
+    <template id="tableTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
